@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Racing API" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js" defer></script>
+    <title>F1 API</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">F1 Race</span>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center" id="top-header" ><em>Welcome to F1 Race Log</em></h1>
+        <div class="row justify-content-center">
+            <div class="col-2"><button>Blue</button></div>
+            <div class="col-2"><button>Gray</button></div>
+            <div class="col-2"><button>Green</button></div>
+            <!-- <div class="col-2"><button>Yellow</button></div> -->
+            <div class="col-2"><button>Red</button></div>
+            <div class="col-2"><button>Teal</button></div>
+        </div>
+    </div>   
+    <div id="racercar" class="row  justify-content-center mt=6">
+        <div id="form_" class="col-6">
+            <section>
+                <form class="row-sm form-control bg-info justify-content-center">
+
+
+                    <label class="seasons" for="season"><h5>Year</h5></label>
+                    <input type="text" class="text form-control" placeholder="Enter Year" id="season">
+
+
+
+                    <label class="rounds" for="round"><h5>Round</h5></label>
+                    <input type="text" class="text form-control" placeholder="Round" id="round">
+
+                    <button type="button" class="btn btn-primary" onclick=getData()>Submit</button>
+
+                </form>
+
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt=8">
+        <div class="col-6">
+            <table id="table_" class="table bg-warning">
+                <thead>
+                    <tr>
+                        <th scope="col">Position</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Nationality</th>
+                        
+                        <th scope="col">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <th id="name-0"></th>
+                        <th id="nationality-0"></th>
+                        
+                        <th id="points-0"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <th id="name-1"></th>
+                        <th id="nationality-1"></th>
+                        
+                        <th id="points-1"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <th id="name-2"></th>
+                        <th id="nationality-2"></th>
+                        
+                        <th id="points-2"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <th id="name-3"></th>
+                        <th id="nationality-3"></th>
+                        
+                        <th id="points-3"></th>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <th id="name-4"></th>
+                        <th id="nationality-4"></th>
+                        
+                        <th id="points-4"></th>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
